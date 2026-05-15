@@ -2,11 +2,11 @@ import SwiftUI
 
 public struct FontZoomCommands: Commands
 {
-    private let store: FontZoomStore
+    private let fontZoom: FontZoomStore
 
     public init(store: FontZoomStore)
     {
-        self.store = store
+        fontZoom = store
     }
 
     public var body: some Commands
@@ -15,24 +15,24 @@ public struct FontZoomCommands: Commands
         {
             Button("Zoom In")
             {
-                store.zoomIn()
+                fontZoom.zoomIn()
             }
             .keyboardShortcut("+", modifiers: .command)
-            .disabled(!store.canZoomIn)
+            .disabled(!fontZoom.canZoomIn)
 
             Button("Zoom Out")
             {
-                store.zoomOut()
+                fontZoom.zoomOut()
             }
             .keyboardShortcut("-", modifiers: .command)
-            .disabled(!store.canZoomOut)
+            .disabled(!fontZoom.canZoomOut)
 
             Button("Actual Size")
             {
-                store.resetZoom()
+                fontZoom.resetZoom()
             }
             .keyboardShortcut("0", modifiers: .command)
-            .disabled(store.zoomIndex == FontZoomSettings.defaultIndex)
+            .disabled(fontZoom.isAtDefaultLevel)
         }
     }
 }

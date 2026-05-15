@@ -7,31 +7,31 @@ extension FontRole
         switch self
         {
         case .screenTitle:
-            return FontRoleStyle(.largeTitle, pointSize: 34, weight: .semibold)
+            return FontRoleStyle(.largeTitle, pointSize: 28, weight: .semibold)
         case .sectionTitle:
-            return FontRoleStyle(.title3, pointSize: 20, weight: .semibold)
+            return FontRoleStyle(.headline, pointSize: 13, weight: .semibold)
         case .itemTitle:
-            return FontRoleStyle(.headline, pointSize: 17, weight: .semibold)
+            return FontRoleStyle(.headline, pointSize: 13, weight: .semibold)
         case .controlLabel:
-            return FontRoleStyle(.callout, pointSize: 15, weight: .medium)
+            return FontRoleStyle(.callout, pointSize: 13, weight: .medium)
         case .metadata:
-            return FontRoleStyle(.caption, pointSize: 12)
+            return FontRoleStyle(.caption, pointSize: 11)
         case .status:
-            return FontRoleStyle(.caption, pointSize: 12, typeface: .sanFranciscoRounded, weight: .bold)
+            return FontRoleStyle(.caption, pointSize: 11, typeface: .sanFranciscoRounded, weight: .bold)
         case .metric:
-            return FontRoleStyle(.title2, pointSize: 22, typeface: .sanFranciscoRounded, weight: .semibold)
+            return FontRoleStyle(.title2, pointSize: 17, typeface: .sanFranciscoRounded, weight: .semibold)
         case .badge:
             return FontRoleStyle(.caption2, pointSize: 11, typeface: .sanFranciscoRounded, weight: .medium)
         case .paragraph:
-            return FontRoleStyle(.body, pointSize: 16, typeface: .newYork)
+            return FontRoleStyle(.body, pointSize: 14, typeface: .newYork)
         case .paragraphCaption:
-            return FontRoleStyle(.footnote, pointSize: 13, typeface: .newYork)
+            return FontRoleStyle(.footnote, pointSize: 11, typeface: .newYork)
         case .url:
-            return FontRoleStyle(.footnote, pointSize: 13, typeface: .sanFranciscoMono)
+            return FontRoleStyle(.footnote, pointSize: 11)
         case .code:
-            return FontRoleStyle(.body, pointSize: 15, typeface: .sanFranciscoMono)
+            return FontRoleStyle(.body, pointSize: 13, typeface: .sanFranciscoMono)
         case .symbol:
-            return FontRoleStyle(.largeTitle, pointSize: 34, typeface: .sanFranciscoRounded, weight: .semibold)
+            return FontRoleStyle(.largeTitle, pointSize: 28, typeface: .sanFranciscoRounded, weight: .semibold)
         }
     }
 }

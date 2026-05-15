@@ -11,11 +11,6 @@ public extension FontRole
     {
         let style = fontStyle
 
-        if scale == FontZoomLevels.defaultScale
-        {
-            return .system(style.textStyle, design: style.design, weight: style.weight)
-        }
-
         return .system(
             size: FontZoomLevels.scaledPointSize(style.standardPointSize, scale: scale),
             weight: style.weight,

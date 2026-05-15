@@ -62,17 +62,25 @@ struct FontRoleTests
         }
     }
 
-    @Test func urlRoleUsesCompactMonospacedFootnoteTypography() async throws
+    @Test func urlRoleUsesCompactInterfaceFootnoteTypography() async throws
     {
         #expect(FontRole.url.fontStyle.textStyle == .footnote)
-        #expect(FontRole.url.fontStyle.standardPointSize == 13)
-        #expect(FontRole.url.fontStyle.typeface == .sanFranciscoMono)
+        #expect(FontRole.url.fontStyle.standardPointSize == 11)
+        #expect(FontRole.url.fontStyle.typeface == .sanFrancisco)
     }
 
     @Test func codeRoleUsesReadableMonospacedBodyTypography() async throws
     {
         #expect(FontRole.code.fontStyle.textStyle == .body)
-        #expect(FontRole.code.fontStyle.standardPointSize == 15)
+        #expect(FontRole.code.fontStyle.standardPointSize == 13)
         #expect(FontRole.code.fontStyle.typeface == .sanFranciscoMono)
+    }
+
+    @Test func listRolesUseCompactMacInterfaceSizes() async throws
+    {
+        #expect(FontRole.itemTitle.fontStyle.standardPointSize == 13)
+        #expect(FontRole.url.fontStyle.standardPointSize == 11)
+        #expect(FontRole.metadata.fontStyle.standardPointSize == 11)
+        #expect(FontRole.badge.fontStyle.standardPointSize == 11)
     }
 }

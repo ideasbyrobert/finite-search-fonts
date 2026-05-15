@@ -52,7 +52,6 @@ public final class FontZoomStore
     {
         zoomIndex = FontZoomSettings.normalizedIndex(newZoomIndex)
         defaults.set(zoomIndex, forKey: FontZoomSettings.storageKey)
-        defaults.synchronize()
     }
 
     private static func savedZoomIndex(defaults: UserDefaults) -> Int

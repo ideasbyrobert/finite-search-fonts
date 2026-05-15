@@ -37,6 +37,39 @@ public enum FontScaleSettings
         )
     }
 
+    public static func font(_ role: FontRole, scale: CGFloat) -> Font
+    {
+        switch role
+        {
+        case .screenTitle:
+            return font(.largeTitle, weight: .semibold, scale: scale)
+        case .sectionTitle:
+            return font(.title3, weight: .semibold, scale: scale)
+        case .itemTitle:
+            return font(.headline, weight: .semibold, scale: scale)
+        case .controlLabel:
+            return font(.callout, weight: .medium, scale: scale)
+        case .metadata:
+            return font(.caption, scale: scale)
+        case .status:
+            return font(.caption, weight: .bold, design: .rounded, scale: scale)
+        case .metric:
+            return font(.title2, weight: .semibold, design: .rounded, scale: scale)
+        case .badge:
+            return font(.caption2, weight: .medium, design: .rounded, scale: scale)
+        case .paragraph:
+            return font(.body, design: .serif, scale: scale)
+        case .paragraphCaption:
+            return font(.footnote, design: .serif, scale: scale)
+        case .symbol(let baseSize):
+            return .system(
+                size: scaledSize(baseSize, scale: scale),
+                weight: .semibold,
+                design: .rounded
+            )
+        }
+    }
+
     public static func canIncrease(_ index: Int) -> Bool
     {
         normalizedIndex(index) < maximumIndex

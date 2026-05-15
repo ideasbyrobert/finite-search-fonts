@@ -26,6 +26,29 @@ struct FontScaleTests
         #expect(FontScaleSettings.scaledSize(4, scale: 0.80) == 8)
     }
 
+    @Test func fontScaleSettingsBuildsRoleFonts() async throws
+    {
+        let roles: [FontRole] =
+        [
+            .screenTitle,
+            .sectionTitle,
+            .itemTitle,
+            .controlLabel,
+            .metadata,
+            .status,
+            .metric,
+            .badge,
+            .paragraph,
+            .paragraphCaption,
+            .symbol(34)
+        ]
+
+        for role in roles
+        {
+            _ = FontScaleSettings.font(role, scale: 1)
+        }
+    }
+
     @Test
     @MainActor
     func fontScaleStorePersistsNormalizedSizeIndex() async throws

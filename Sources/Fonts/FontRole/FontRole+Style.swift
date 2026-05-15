@@ -17,17 +17,21 @@ extension FontRole
         case .metadata:
             return FontRoleStyle(.caption, pointSize: 12)
         case .status:
-            return FontRoleStyle(.caption, pointSize: 12, design: .rounded, weight: .bold)
+            return FontRoleStyle(.caption, pointSize: 12, typeface: .sanFranciscoRounded, weight: .bold)
         case .metric:
-            return FontRoleStyle(.title2, pointSize: 22, design: .rounded, weight: .semibold)
+            return FontRoleStyle(.title2, pointSize: 22, typeface: .sanFranciscoRounded, weight: .semibold)
         case .badge:
-            return FontRoleStyle(.caption2, pointSize: 11, design: .rounded, weight: .medium)
+            return FontRoleStyle(.caption2, pointSize: 11, typeface: .sanFranciscoRounded, weight: .medium)
         case .paragraph:
-            return FontRoleStyle(.body, pointSize: 16, design: .serif)
+            return FontRoleStyle(.body, pointSize: 16, typeface: .newYork)
         case .paragraphCaption:
-            return FontRoleStyle(.footnote, pointSize: 13, design: .serif)
+            return FontRoleStyle(.footnote, pointSize: 13, typeface: .newYork)
+        case .url:
+            return FontRoleStyle(.footnote, pointSize: 13, typeface: .sanFranciscoMono)
+        case .code:
+            return FontRoleStyle(.body, pointSize: 15, typeface: .sanFranciscoMono)
         case .symbol:
-            return FontRoleStyle(.largeTitle, pointSize: 34, design: .rounded, weight: .semibold)
+            return FontRoleStyle(.largeTitle, pointSize: 34, typeface: .sanFranciscoRounded, weight: .semibold)
         }
     }
 }

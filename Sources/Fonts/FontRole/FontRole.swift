@@ -1,4 +1,4 @@
-public enum FontRole: Equatable, Sendable
+public enum FontRole: CaseIterable, Equatable, Hashable, Sendable
 {
     case screenTitle
     case sectionTitle
@@ -10,5 +10,7 @@ public enum FontRole: Equatable, Sendable
     case badge
     case paragraph
     case paragraphCaption
+    case url
+    case code
     case symbol
 }

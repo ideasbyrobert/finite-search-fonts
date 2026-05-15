@@ -2,18 +2,40 @@ import Fonts
 
 enum FontRoleFixture
 {
-    static let allRoles: [FontRole] =
+    static let readingRoles: Set<FontRole> =
+    [
+        .paragraph,
+        .paragraphCaption
+    ]
+
+    static let standardInterfaceRoles: Set<FontRole> =
     [
         .screenTitle,
         .sectionTitle,
         .itemTitle,
         .controlLabel,
-        .metadata,
+        .metadata
+    ]
+
+    static let roundedInterfaceRoles: Set<FontRole> =
+    [
         .status,
         .metric,
         .badge,
-        .paragraph,
-        .paragraphCaption,
         .symbol
     ]
+
+    static let monospacedContentRoles: Set<FontRole> =
+    [
+        .url,
+        .code
+    ]
+
+    static var allClassifiedRoles: Set<FontRole>
+    {
+        readingRoles
+            .union(standardInterfaceRoles)
+            .union(roundedInterfaceRoles)
+            .union(monospacedContentRoles)
+    }
 }

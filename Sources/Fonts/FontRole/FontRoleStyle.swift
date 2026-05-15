@@ -4,19 +4,24 @@ struct FontRoleStyle
 {
     let textStyle: Font.TextStyle
     let standardPointSize: CGFloat
-    let design: Font.Design
+    let typeface: AppleTypeface
     let weight: Font.Weight?
+
+    var design: Font.Design
+    {
+        typeface.design
+    }
 
     init(
         _ textStyle: Font.TextStyle,
         pointSize: CGFloat,
-        design: Font.Design = .default,
+        typeface: AppleTypeface = .sanFrancisco,
         weight: Font.Weight? = nil
     )
     {
         self.textStyle = textStyle
         standardPointSize = pointSize
-        self.design = design
+        self.typeface = typeface
         self.weight = weight
     }
 }

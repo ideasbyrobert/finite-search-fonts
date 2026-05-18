@@ -13,4 +13,7 @@ public enum FontRole: CaseIterable, Equatable, Hashable, Sendable
     case url
     case code
     case symbol
+    case smallIcon
+    case filterIcon
+    case actionIcon
 }

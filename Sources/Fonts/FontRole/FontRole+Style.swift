@@ -32,6 +32,12 @@ extension FontRole
             return FontRoleStyle(.body, pointSize: 13, typeface: .sanFranciscoMono)
         case .symbol:
             return FontRoleStyle(.largeTitle, pointSize: 28, typeface: .sanFranciscoRounded, weight: .semibold)
+        case .smallIcon:
+            return FontRoleStyle(.caption2, pointSize: 9, weight: .medium)
+        case .filterIcon:
+            return FontRoleStyle(.body, pointSize: 17)
+        case .actionIcon:
+            return FontRoleStyle(.callout, pointSize: 13, weight: .medium)
         }
     }
 }

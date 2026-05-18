@@ -15,7 +15,10 @@ enum FontRoleFixture
         .itemTitle,
         .controlLabel,
         .metadata,
-        .url
+        .url,
+        .smallIcon,
+        .filterIcon,
+        .actionIcon
     ]
 
     static let roundedInterfaceRoles: Set<FontRole> =

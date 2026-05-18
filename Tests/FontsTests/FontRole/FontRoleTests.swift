@@ -83,4 +83,11 @@ struct FontRoleTests
         #expect(FontRole.metadata.fontStyle.standardPointSize == 11)
         #expect(FontRole.badge.fontStyle.standardPointSize == 11)
     }
+
+    @Test func iconRolesUsePurposefulInterfaceSizes() async throws
+    {
+        #expect(FontRole.smallIcon.fontStyle.standardPointSize == 9)
+        #expect(FontRole.filterIcon.fontStyle.standardPointSize == 17)
+        #expect(FontRole.actionIcon.fontStyle.standardPointSize == 13)
+    }
 }
